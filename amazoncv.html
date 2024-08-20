@@ -4,121 +4,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>CV - Medhi Balouka</title>
+    <title>Medhi Balouka - CV</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap');
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #e3e6e6;
         }
 
         header {
-            background-color: #232f3e;
-            color: white;
-            padding: 20px;
+            background-color: #131921;
+            padding: 10px;
         }
 
-        .header-container {
+        .navbar {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            color: white;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .header-left {
+        .nav-logo img {
+            height: 40px;
+        }
+
+        .nav-search {
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            margin: 0 20px;
         }
 
-        .header-left h1 {
-            margin: 0;
-            font-size: 24px;
-            font-weight: bold;
+        .nav-search input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
         }
 
-        .header-left p {
-            margin: 5px 0;
+        .nav-search .search-icon {
+            background-color: #febd69;
+            padding: 10px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
         }
 
-        .header-right {
+        .nav-right {
             display: flex;
             align-items: center;
         }
 
-        .header-right a {
+        .nav-right a {
             color: white;
             text-decoration: none;
             margin-left: 20px;
             font-size: 14px;
+            display: flex;
+            align-items: center;
         }
 
-        .header-right a:hover {
+        .nav-right a:hover {
             text-decoration: underline;
         }
 
-        .header-right i {
+        .nav-right i {
             margin-right: 8px;
         }
 
-        .main-content {
-            padding: 20px;
+        .profile-section {
+            display: flex;
+            align-items: center;
+            margin: 20px auto;
             max-width: 1200px;
-            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
-            color: #232f3e;
-            border-bottom: 2px solid #232f3e;
+        .profile-img {
+            flex: 0 0 150px;
+            margin-right: 20px;
+        }
+
+        .profile-img img {
+            border-radius: 50%;
+            width: 100%;
+            height: auto;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #131921;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #131921;
             padding-bottom: 5px;
         }
 
-        /* Additional styles for responsiveness */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+        .section-title i {
+            color: #febd69;
+            margin-right: 10px;
+        }
 
-            .header-right {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+        .content-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
 
-            .header-right a {
-                margin: 5px 0;
-            }
+        .content-item img {
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
+        }
+
+        .content-item h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .content-item p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        footer {
+            background-color: #131921;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 12px;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="header-container">
-            <div class="header-left">
-                <h1>Medhi BALOUKA</h1>
-                <p>Nîmes, France 30000</p>
-                <p>Passionate about Data, AI, and Fintech, I aim to apply my skills in Finance Analytics...</p>
+        <div class="navbar">
+            <div class="nav-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
             </div>
-            <div class="header-right">
-                <a href="mailto:medhi.balouka@gmail.com"><i class="fa-solid fa-envelope"></i>medhi.balouka@gmail.com</a>
-                <a href="tel:+3367541429"><i class="fa-solid fa-phone"></i>+33 07 67 54 14 29</a>
-                <a href="https://www.linkedin.com/in/medhibalouka"><i class="fab fa-linkedin"></i>LinkedIn</a>
-                <a href="https://github.com/medhibalouka"><i class="fab fa-github"></i>GitHub</a>
+            <div class="nav-search">
+                <input type="text" placeholder="Search Medhi's skills and experiences...">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="mailto:medhi.balouka@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+                <a href="https://www.linkedin.com/in/medhi-balouka-5a5342189/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/medhiblk/All-My-Projects"><i class="fab fa-github"></i> GitHub</a>
             </div>
         </div>
     </header>
 
-    <main class="main-content">
-        <!-- Your main CV content here -->
-        <h2>WORK EXPERIENCES</h2>
-        <!-- Add your sections here -->
-        <h2>EDUCATION</h2>
-        <!-- Add your sections here -->
+    <div class="profile-section">
+        <div class="profile-img">
+            <img src="https://media.licdn.com/dms/image/C4E03AQHZi11yPyyJMw/profile-displayphoto-shrink_400_400/0/1645693115327?e=2147483647&v=beta&t=EDlt7gcWB31g04UWv7GJaNKI4PotYeQS_S_4QHwGfAs" alt="Profile Picture">
+        </div>
+        <div class="profile-info">
+            <h1>Medhi BALOUKA</h1>
+            <p>Nîmes, France 30000 | Mobile: (+33) 07 67 54 14 29</p>
+            <p>Passionate about Data, AI, and Fintech, I aim to apply my skills in Finance Analytics...</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="section">
+            <div class="section-title"><i class="fa-solid fa-briefcase"></i> Work Experiences</div>
+            <div class="content-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mars_Incorporated_2019_logo.svg" alt="Mars Inc.">
+                <div>
+                    <h3>Finance Rotation Program, Apprenticeship - Mars Inc.</h3>
+                    <p><strong>Copilot and CFO Right-Hand</strong> - Supported CFO in Budgeting, managed FinOps...</p>
+                </div>
+            </div>
+            <div class="content-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Royal-Canin-Logo.svg" alt="Royal Canin">
+                <div>
+                    <h3>FP&A Controllership Business Intelligence - Royal Canin</h3>
+                    <p>Standardized a consolidated report of 48 financial regional reviews...</p>
+                </div>
+            </div>
+            <!-- More work experiences -->
+        </div>
+
+        <div class="section">
+            <div class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education</div>
+            <div class="content-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Logo_TBS_Education.png" alt="TBS Education">
+                <div>
+                    <h3>Dual Master Degree – TBS Education</h3>
+                    <p><strong>Master of Science – AI & Data Science</strong> - 09/2023 - 08/2024</p>
+                </div>
+            </div>
+            <!-- More education details -->
+        </div>
+
+        <div class="section">
+            <div class="section-title"><i class="fa-solid fa-trophy"></i> Extracurricular Activities</div>
+            <div class="content-item">
+                <img src="https://www.eurobiomed.org/wp-content/uploads/2022/01/Torus.png" alt="Torus AI">
+                <div>
+                    <h3>Consulting, Top Performer | TBS Education, Torus AI (2M Revenue)</h3>
+                    <p>Led a 1-month consulting mission for an AI start-up, transitioning from Series A to B, managing a team of 6...</p>
+                </div>
+            </div>
+            <!-- More extracurricular activities -->
+        </div>
+
+        <div class="section">
+            <div class="section-title"><i class="fa-solid fa-cogs"></i> Skills & Interests</div>
+            <div class="content-item">
+                <h3>Languages: French (Native), English (Fluent), Spanish (Advanced)</h3>
+                <p>Skills: Excel, VBA, Power BI, Tableau, Python, R, SQL, MS Access, Oracle, Dynamics, GPT, LLM...</p>
+            </div>
+            <!-- More skills and interests -->
+        </div>
     </main>
+
+    <footer>
+        <p>Medhi BALOUKA © 2024 | All Rights Reserved</p>
+        <p>Built with love by Medhi using HTML, CSS & FontAwesome</p>
+    </footer>
 </body>
 
 </html>
